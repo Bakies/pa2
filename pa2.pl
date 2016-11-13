@@ -24,6 +24,10 @@ enroll(jim,1000).
 *****                           *****
 ************************************/
 
+/*************************************
+** define your four predicates here **
+*************************************/
+
 /*
 * schedule/3	
 * The schedule predicate should take the parameters of (student, classroom, time). 
@@ -63,6 +67,3 @@ meet(X, Y) :- enroll(X, A), when_(A, T), enroll(Y, B), addsub(T, I, J), (when_(B
 addsub(X, Y, Z) :- Y is X+1, Z is X-1.
 
 
-/*************************************
-** define your four predicates here **
-*************************************/

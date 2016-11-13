@@ -25,6 +25,38 @@ enroll(jim,1000).
 *****                           *****
 ************************************/
 
+/*
+* schedule/3	
+* The schedule predicate should take the parameters of (student, classroom, time). 
+* With this predicate, we can form queries such as ?- schedule(mary, P, T). and get results: P = dobbs118 T = 12; P = wentw118 T = 12; 
+* This predicate can also query a classroom’s usage with something like ?- schedule(S, wentw216, T).
+* This will show all the students in a classroom and the times that they are there.
+*/
+
+/*
+* usage/2	
+* The usage predicate gives all the times that a classroom is in use.
+* For example, ?- usage(dobbs102, T). would result in: T = 10; 
+* The query usage(X, 12). should return all of the classrooms that are in use at 12.
+*/
+
+/*
+* conflict/2
+* A conflict exists if two courses are using the same classroom at the same time. 
+* ?- conflict(X, 3350). should return false.
+* The query conflict(X,Y). should return all room conflicts in the database. 
+* The two arguments are course numbers.  
+*/
+
+/*
+* meet/2
+* This predicate will decide if two students can meet each other, according to their schedules. 
+* There are two ways that two students can meet: 
+* 	either they can meet by being enrolled in the same course, 
+* 	or they can have different classes in the same classrooms at adjacent times (off by an hour). 
+* (For this predicate, you only need to return true for one ordering of the query. For example, meet(mary, john). might be true, or meet(john, mary). might be true.
+*/
+
 
 
 /*************************************

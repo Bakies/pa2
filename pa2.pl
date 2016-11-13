@@ -49,6 +49,7 @@ usage(P, T) :- where(X, P), when_(X, T).
 * The query conflict(X,Y). should return all room conflicts in the database. 
 * The two arguments are course numbers.  
 */
+conflict(X, Y) :- where(X, P), where(Y, P), when_(X, T), when_(Y, T), X \== Y.
 
 /*
 * meet/2

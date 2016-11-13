@@ -16,11 +16,6 @@ enroll(mary,3350).
 enroll(john,1000).
 enroll(jim,1000).
 
-
-enroll(m, 2350). 
-enroll(n, 3400).
-
-
 /************************************
 *****                           *****
 ***** In your final submission, *****

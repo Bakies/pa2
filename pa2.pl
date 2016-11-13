@@ -40,6 +40,7 @@ schedule(S, P, T) :- when_(X, T), where(X, P), enroll(S, X).
 * For example, ?- usage(dobbs102, T). would result in: T = 10; 
 * The query usage(X, 12). should return all of the classrooms that are in use at 12.
 */
+usage(P, T) :- where(X, P), when_(X, T).
 
 /*
 * conflict/2

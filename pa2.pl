@@ -32,6 +32,7 @@ enroll(jim,1000).
 * This predicate can also query a classroom’s usage with something like ?- schedule(S, wentw216, T).
 * This will show all the students in a classroom and the times that they are there.
 */
+schedule(S, P, T) :- when_(X, T), where(X, P), enroll(S, X).
 
 /*
 * usage/2	

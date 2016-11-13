@@ -4,7 +4,7 @@ when_(1000,10).
 when_(1200,12).
 when_(3400,11).
 when_(3350,12).
-when_(2350,11).
+when_(2350,12).
 where(1000,dobbs102).
 where(1200,dobbs118).
 where(3400,wentw216).
@@ -15,6 +15,10 @@ enroll(john,3400).
 enroll(mary,3350).
 enroll(john,1000).
 enroll(jim,1000).
+
+
+enroll(m, 2350). 
+enroll(n, 3400).
 
 
 /************************************
@@ -59,7 +63,9 @@ conflict(X, Y) :- where(X, P), where(Y, P), when_(X, T), when_(Y, T), X \== Y.
 * 	or they can have different classes in the same classrooms at adjacent times (off by an hour). 
 * (For this predicate, you only need to return true for one ordering of the query. For example, meet(mary, john). might be true, or meet(john, mary). might be true.
 */
-
+meet(X, Y) :- enroll(X, Z), enroll(Y, Z), X \== Y.
+meet(X, Y) :- enroll(X, A), when_(A, T), enroll(Y, B), addsub(T, I, J), (when_(B, I); when_(B, J)), where(A, P), where(B, P), X \== Y.
+addsub(X, Y, Z) :- Y is X+1, Z is X-1.
 
 
 /*************************************

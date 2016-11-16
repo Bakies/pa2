@@ -1,10 +1,10 @@
 % COMP3071 - PA2
 
-when_(1000,10).
-when_(1200,12).
-when_(3400,11).
-when_(3350,12).
-when_(2350,12).
+when(1000,10).
+when(1200,12).
+when(3400,11).
+when(3350,12).
+when(2350,11).
 where(1000,dobbs102).
 where(1200,dobbs118).
 where(3400,wentw216).
